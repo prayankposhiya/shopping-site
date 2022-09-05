@@ -1,0 +1,14 @@
+<%- include("../includes/header") %>
+<body>
+    <header>
+        <%- include("../includes/navbar") %>
+    </header>
+    <main>
+        <h1 style="text-align: center;">We Have A Lot's Of Collection Of Different Books</h1>
+        <a href="/book-list" style="display: flex;justify-content: center;">Go to booklist</a>
+        <form action="/admin/user" method="POST">
+            <input type="text" name="username"/>
+            <input type="email" name="email">
+            <input type="submit" >
+        </form>
+    <%- include("../includes/end") %>

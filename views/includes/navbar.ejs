@@ -1,0 +1,22 @@
+<nav>
+    <ul style="display:flex;justify-content:space-between;text-decoration: none;list-style: none;">
+        <li >
+            <a href="/" style=<%= path=='/'?'color:green':'color:blue' %>>Shop</a>
+        </li>
+        <li>
+            <a href="/book-list" style=<%= path=='/book-list'?'color:green':'color:blue' %>>Book List</a>
+        </li>
+        <li>
+            <a href="/cart" style=<%= path=='/cart'?'color:green':'color:blue' %>>Cart</a>
+        </li>
+        <li>
+            <a href="/orders" style=<%= path=='/orders'?'color:green':'color:blue' %>>Orders</a>
+        </li>
+        <li>
+            <a href="/admin/books" style=<%= path=='/admin/books'?'color:green':'color:blue' %>>Admin Books</a>
+        </li>
+        <li>
+            <a href="/admin/addbook" style=<%= path=='/admin/addbook'?'color:green':'color:blue' %>>Add Product</a>
+        </li>
+    </ul>
+</nav>

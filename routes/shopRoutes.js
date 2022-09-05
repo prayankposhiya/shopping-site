@@ -1,0 +1,12 @@
+const express = require("express");
+const shopcontroller = require("../controller/shop");
+const { data } = require("./adminRoutes");
+const router = express.Router();
+router.get("/", shopcontroller.homePage);
+router.get("/book-list", shopcontroller.showBooks);
+router.get("/orders", shopcontroller.ordersPage);
+router.get("/books/:bookId", shopcontroller.showBook);
+router.get("/cart", shopcontroller.showCart);
+router.post("/cart", shopcontroller.addToCart);
+router.post("/removeFcart", shopcontroller.removeToCart);
+module.exports = router;

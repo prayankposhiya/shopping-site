@@ -1,0 +1,13 @@
+<%- include("../includes/header") %>
+<body>
+    <header>
+        <%- include("../includes/navbar") %>
+    </header>
+    <main>
+        <div style="display: flex;flex-direction:column;align-items:center;">
+            <h1><%= book.title %></h1>
+            <h5>Price of this book is:<%= book.price %></h5>
+            <h5>About this Book :<%= book.description %></h5>
+        </div>
+        <a href="/book-list" style="display: flex;justify-content:center;">Go to Booklist</a>
+<%- include("../includes/end") %>

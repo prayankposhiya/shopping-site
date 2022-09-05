@@ -1,0 +1,11 @@
+const express = require("express");
+const adminControler = require("../controller/admin");
+const router = express.Router();
+router.get("/addbook", adminControler.addBookPage);
+router.post("/addbook", adminControler.addBook);
+router.post("/editbook", adminControler.editBook);
+router.get("/books", adminControler.Books);
+router.get("/delete/:bookId", adminControler.deleteBook);
+router.get("/edit/:bookId", adminControler.editBookPage);
+router.post("/user", adminControler.addUser);
+module.exports = router;

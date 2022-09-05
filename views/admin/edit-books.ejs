@@ -1,0 +1,21 @@
+<%- include('../includes/header') %>
+<body>
+    <header>
+        <%- include('../includes/navbar') %>
+    </header>
+
+    <main>
+        <form action="/admin/editbook" method="POST">
+            <div style="display: flex;flex-direction:column;">
+                <label for="title">Enter Book's title</label>
+            <input type="text" name="title" value="<%= book.title %>" required>
+                <label for="title">Enter Book's price</label>
+            <input type="number" name="price" value="<%= book.price %>" required>
+                <label for="title">Enter Book's Description(optional)</label>
+            <input type="text" name="description" value="<%= book.description %>">
+            <input type="hidden" name="id" value="<%= book.id %>">
+
+            <button type="submit">Update Book</button>
+            </div>
+        </form>
+<%- include('../includes/end') %>

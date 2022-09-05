@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "start": "node your-script.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "create-react-app": "^5.0.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.6",
+    "express-handler": "^0.2.0",
+    "handy-storage": "^2.1.6",
+    "mysql2": "^2.3.3",
+    "pug": "^3.0.2",
+    "sequelize": "^6.21.4"
+  }
+}

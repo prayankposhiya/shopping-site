@@ -1,0 +1,21 @@
+<%- include('../includes/header') %>
+<body>
+    <header>
+        <%- include('../includes/navbar') %>
+    </header>
+    <main>
+        <div style="display: flex;justify-content: center;align-items: center;flex-direction: column;">
+        <h1>All the books are:-</h1>
+        <% if(booklist.length>0){ %>
+            <% for(book of booklist) { %>
+                <h4><%= book.title %></h4>
+                <div>
+                    <a href="/admin/edit/<%= book.id %>?edit=true">Edit Book</a>
+                    <a href="/admin/delete/<%= book.id %>">Delete Book</a>
+                </div>
+            <% } %>
+        <% } else { %>
+            <h4>No Books are there</h4>
+        <% } %>
+        </div>
+<%- include('../includes/end') %> 

@@ -1,0 +1,24 @@
+<%- include("../includes/header") %>
+<body>
+    <header>
+        <%- include("../includes/navbar") %>
+    </header>
+    <main>
+        <% if(cart.length>0){ %>
+        <% for(book of cart) { %>
+            <div style="display: flex;justify-content: space-between;">
+                <h3><%= book.title %></h3>
+                <h3><%= book.quy %></h3>
+                <h3><%= book.price*book.quy %></h3>
+                <form action="/removeFcart" method="POST">
+                    <input type="hidden" name="id" value="<%= book.id %>">
+                    <button type="submit">Remove Book</button>
+                </form>
+            </div>
+        <% } } else {%>
+            <div style="display: flex;justify-content: center;flex-direction: column;align-items: center;">
+                <h2>No books are in cart</h2>
+                <a href="/book-list">Go to booklist</a>
+            </div>
+        <% } %>
+   <%- include("../includes/end") %>

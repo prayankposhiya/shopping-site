@@ -1,0 +1,22 @@
+<%- include('../includes/header') %>
+<body>
+    <header>
+        <%- include('../includes/navbar') %>
+    </header>
+
+    <main style="display:flex;align-items:center;justify-content:center;flex-direction:column;">
+        <h1>My Products</h1>
+        <% if(booklist.length >0){ %>
+            <% for(book of booklist) { %>
+                <h4><%= book.title %></h4>
+                <a href="/books/<%= book.id %>">Show Book</a>
+                <form action="/cart" method="POST">
+                    <input type="hidden" name="id" value="<%= book.id %>">
+                    <button type="submit">ADD TO CART</button> 
+                </form>
+            <% } %>
+
+        <% } else { %>
+            <h4>No data found</h4>
+        <% } %>
+<%- include('../includes/end') %>
