@@ -1,14 +1,20 @@
-// const mysql = require("mysql2");
-// const pool = mysql.createPool({
-//   host: "localhost",
-//   user: "root",
-//   database: "node_schema",
-//   password: "Prayank@10201",
-// });
-// module.exports = pool.promise();
-const { Sequelize, DataTypes } = require("sequelize");
-const sequelize = new Sequelize("node_schema", "root", "Prayank@10201", {
-  host: "localhost",
-  dialect: "mysql",
-});
-module.exports = { sequelize: sequelize, DataTypes: DataTypes };
+const mongodb = require("mongodb");
+const MongoClient = mongodb.MongoClient;
+let _db;
+const mongoConnect = (callback) => {
+  MongoClient.connect(
+    "mongodb+srv://Prayank_Poshiya:liI3kBYGfXffGsnh@cluster0.4ic41kg.mongodb.net/?retryWrites=true&w=majority"
+  )
+    .then((client) => {
+      _db = client.db();
+    })
+    .catch((error) => console.log(error));
+};
+const getDb = () => {
+  if (_db) {
+    return _db;
+  }
+};
+
+module.exports.mongoConnect = mongoConnect;
+module.exports.getDb = getDb;

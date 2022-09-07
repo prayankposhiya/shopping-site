@@ -10,6 +10,7 @@
     "express-handlebars": "^6.0.6",
     "express-handler": "^0.2.0",
     "handy-storage": "^2.1.6",
+    "mongodb": "^4.9.1",
     "mysql2": "^2.3.3",
     "pug": "^3.0.2",
     "sequelize": "^6.21.4"
